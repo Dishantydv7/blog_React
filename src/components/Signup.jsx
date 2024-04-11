@@ -12,10 +12,10 @@ function Signup() {
     const [error , setError] = useState('')
     const {register , handleSubmit} = useForm()
 
-    const signup = async (data ) => {
+    const create = async (data) => {
         setError('')
         try {
-          const userData =   await authService.createAccount(data)
+            const userData = await authService.createAccount(data)
 
           if (userData) {
            const userData =  await authService.getCurrentUser()
